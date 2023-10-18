@@ -25,24 +25,31 @@ function BarsPage() {
 
   return (
     <div>
-      <h1>Bars</h1>
-      
-      {/* Link to Add Bar Form */}
+      <h1>Pick Your Poison!</h1>
+  
+      {/* Display Bars in Grid */}
+      <div className="grid-container">
+        {bars.map(bar => (
+          <div key={bar.id} className="grid-item">
+            {/* Drink Image */}
+            <Link to={`/bars/show/${bar.id}`}>
+              <img 
+                src={bar.drink_picture_url} 
+                alt={bar.drink_name} 
+                className="drink-image" 
+              />
+            </Link>
+            <p>{bar.drink_name}</p>
+          </div>
+        ))}
+      </div>
       <Link to="/bars/add">
         <button>Add a New Bar</button>
       </Link>
-  
-      {/* Display Bars */}
-      <ul>
-    {bars.map(bar => (
-        <li key={bar.id}>
-            <Link to={`/bars/show/${bar.id}`}>{bar.name}</Link>
-        </li>
-    ))}
-</ul>
     </div>
-  );
 
+    
+  );
 }
 
 export default BarsPage;

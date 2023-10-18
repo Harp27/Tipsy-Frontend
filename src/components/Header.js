@@ -18,7 +18,7 @@ function Header() {
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark custom-header justify-content-between">
       <Link className="navbar-brand" to="/">
-        <img src={logo} alt="Tipsy Traveler Logo" width="170" />
+        <img src={logo} alt="Tipsy Traveler Logo" width="175" />
       </Link>
 
       <div className="saying">{currentSaying}</div>
