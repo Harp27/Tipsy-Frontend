@@ -58,7 +58,7 @@ function BarShowPage() {
   
 
   return (
-    <div>
+    <div className="bar-show-container">
       {isEditing ? (
         <form onSubmit={handleSubmit}>
           <label>
@@ -91,8 +91,8 @@ function BarShowPage() {
         <>
           {bar.drink_picture_url && <img src={bar.drink_picture_url} alt="Drink" style={{width: "300px"}} />}
           <h1>{bar.name}</h1>
-          <p><strong>Drink Name:</strong> {bar.drink_name}</p>
-          <p><strong>Drink Description:</strong> {bar.drink_description}</p>
+          <p> {bar.drink_name}</p>
+          <p className="drink-description"> {bar.drink_description}</p>
           <p><strong>Walkability:</strong> {bar.city_walkability}</p>
           <p><strong>Crime Rate:</strong> {bar.city_crime_rate}</p>
           <button onClick={() => setIsEditing(true)}>Edit</button>

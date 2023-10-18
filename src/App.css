@@ -119,3 +119,70 @@ body {
   filter: grayscale(0%);
   transform: scale(1.2);
 }
+
+form {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.8); /* White with some transparency */
+  border-radius: 10px; /* Slightly rounded border */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* subtle shadow for a lifted look */
+  margin-top: 50px;
+  opacity: 70%;
+  margin-bottom: 50px;
+}
+
+label {
+  display: block;
+  margin-bottom: 15px; /* Space between each label-input group */
+}
+
+label input {
+  width: 100%; /* Full width */
+  padding: 10px; /* Padding inside the input field */
+  border: 1px solid #ccc; /* Light grey border */
+  border-radius: 5px; /* Slightly rounded border for the input */
+  margin-top: 5px; /* Space between label and input */
+  font-size: 16px; /* Slightly bigger font */
+}
+
+button {
+  background-color: darkgreen; /* Choose a color that matches your theme */
+  color: white; /* White text on the button */
+  padding: 10px 15px; /* Padding inside the button */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer; /* Hand cursor on hover */
+  transition: background-color 0.3s ease; /* Transition for a smooth color change on hover */
+}
+
+button:hover {
+  background-color: #006400; /* A darker green on hover */
+}
+
+/* Optional: If you want to give a title to your form */
+form h1 {
+  text-align: center;
+  margin-bottom: 20px; /* Space between the title and the first field */
+}
+
+.bar-show-container {
+  text-align: center;
+  color: green;
+  margin-top: 50px;
+}
+
+.bar-show-container img {
+  width: 300px;
+  margin: auto;
+  display: block;
+  border-radius: 20px;
+}
+
+.bar-show-container .drink-description {
+  max-width: 80%; /* Control the width to prevent it from taking up the entire page */
+  margin: 20px auto; /* Center the description */
+  text-align: left; /* For a more natural reading flow */
+  text-indent: 2em; /* Indent the first line of the description */
+  line-height: 1.5; /* Spacing between lines for readability */
+}
