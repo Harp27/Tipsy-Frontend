@@ -4,21 +4,21 @@ import { Link } from 'react-router-dom';
 import logo from '../images/Tipsy.png'; // Change the path to wherever you store the logo image
 
 function Header() {
-    const sayings = ["Pour decisions ahead!", "Sip, sip, hooray!", "Cheers to good times!", "Bottoms up!"];
+    const sayings = ["Pour decisions ahead!", "Sip, sip, hooray!", "Cheers to good times!", "Bottoms up!", "Shots?!"];
   const [currentSaying, setCurrentSaying] = useState(sayings[0]);
-    
+// favorite line!
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentSaying(sayings[Math.floor(Math.random() * sayings.length)]);
-    }, 4000); // change every 5 seconds
+    }, 3000); 
     return () => clearInterval(interval);
     // eslint-disable-next-line
   }, []);
 
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-dark custom-header justify-content-between">
+    <nav className="navbar navbar-expand-lg custom-header justify-content-between">
       <Link className="navbar-brand" to="/">
-        <img src={logo} alt="Tipsy Traveler Logo" width="175" />
+        <img src={logo} alt="Tipsy Traveler Logo" width="200" />
       </Link>
 
       <div className="saying">{currentSaying}</div>

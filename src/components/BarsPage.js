@@ -18,15 +18,15 @@ function BarsPage() {
         setError(err.message || "An error occurred");
         setLoading(false);
       });
-  }, []); // The empty dependency array means this useEffect runs once when the component mounts
+  }, []); 
 
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error: {error}</p>;
 
   return (
-    <div>
+    <div className="poison">
+      
       <h1>Pick Your Poison!</h1>
-  
       {/* Display Bars in Grid */}
       <div className="grid-container">
         {bars.map(bar => (

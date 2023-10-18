@@ -14,11 +14,11 @@ function Homepage() {
                     your glass to unforgettable experiences with Tipsy Traveler. Cheers to exploring the world, one drink at a time!
                 </p>
                 <Link to="/bars">
-                    <button className="view-bars-btn">View Bars</button>
+                    <button className="view-bars-btn">Let's Drink!</button>
                 </Link>
             </div>
             <div className="home-image">
-                {/* Replace with your desired image */}
+                
                 <img src={drinks} alt="Descriptive Alt Text" />
             </div>
         </div>

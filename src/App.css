@@ -1,10 +1,13 @@
 
 body {
-  background-color: #000; /* Black color */
+  background-color: #000; 
 }
-/* Override bg-dark in case Bootstrap updates don't catch the custom-header change */
-.bg-dark {
-  background-color: rgba(40, 44, 52, 0.70) !important;
+
+.navbar {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(./images//header-image.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
 }
 
 .nav-container {
@@ -12,9 +15,9 @@ body {
 }
 
 .custom-btn {
-  font-size: 1.2rem;  /* Adjust font size */
-  padding: 10px 20px;  /* Increase padding: top-bottom, left-right */
-  margin: 0 5px;  /* Optional: Add some margin between buttons */
+  font-size: 1.2rem;  
+  padding: 10px 20px;  
+  margin: 0 5px;  
   color: forestgreen;
   font-weight: bold
 }
@@ -23,9 +26,9 @@ body {
   font-size: 2.5rem;
   font-weight: bold;
   margin: 0 2rem; 
-  display: inline-block; /* Making sure transform works */
+  display: inline-block; 
   opacity: 0;
-  animation: slideIn 1s 1s forwards; /* Adding a delay so you can notice the effect */
+  animation: slideIn 1s 1s forwards; 
   color: rgb(218, 103, 9)
 }
 
@@ -42,7 +45,7 @@ body {
 
 .saying {
   font-family: 'Pacifico', cursive;
-  /* ... other styles ... */
+  
 }
 
 .home-container {
@@ -67,8 +70,8 @@ body {
 .home-text p {
   font-size: 1rem;
   line-height: 1.5;
-  color: #ac4f07;  /* Adjust to your preferred color */
-  margin-bottom: 2rem; /* Space between the paragraph and the button */
+  color: #ac4f07;  
+  margin-bottom: 2rem;
 }
 
 .view-bars-btn {
@@ -87,13 +90,13 @@ body {
 .home-image img {
   width: 100%;
   height: auto;
-  border-radius: 10px; /* Optional, to give rounded corners */
+  border-radius: 10px; 
 }
 
 .grid-container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 columns */
-  gap: 20px; /* Space between grid items */
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 20px; 
   margin-top: 20px;
 }
 
@@ -106,9 +109,9 @@ body {
 
 .drink-image {
   width: 250px;
-  height: 250px; /* Setting a fixed height */
+  height: 250px; 
   border-radius: 20px;
-  object-fit: cover; /* Ensures the image scales correctly */
+  object-fit: cover; 
 }
 
 .drink-image {
@@ -124,9 +127,9 @@ form {
   max-width: 500px;
   margin: 0 auto;
   padding: 20px;
-  background-color: rgba(255, 255, 255, 0.8); /* White with some transparency */
-  border-radius: 10px; /* Slightly rounded border */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* subtle shadow for a lifted look */
+  background-color: rgba(255, 255, 255, 0.8); 
+  border-radius: 10px; 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
   margin-top: 50px;
   opacity: 70%;
   margin-bottom: 50px;
@@ -134,36 +137,36 @@ form {
 
 label {
   display: block;
-  margin-bottom: 15px; /* Space between each label-input group */
+  margin-bottom: 15px; 
 }
 
 label input {
-  width: 100%; /* Full width */
-  padding: 10px; /* Padding inside the input field */
-  border: 1px solid #ccc; /* Light grey border */
-  border-radius: 5px; /* Slightly rounded border for the input */
-  margin-top: 5px; /* Space between label and input */
-  font-size: 16px; /* Slightly bigger font */
+  width: 100%; 
+  padding: 10px; 
+  border: 1px solid #ccc; 
+  border-radius: 5px; 
+  margin-top: 5px; 
+  font-size: 16px; 
 }
 
 button {
-  background-color: darkgreen; /* Choose a color that matches your theme */
-  color: white; /* White text on the button */
-  padding: 10px 15px; /* Padding inside the button */
+  background-color: darkgreen; 
+  color: white; 
+  padding: 10px 15px; 
   border: none;
   border-radius: 5px;
-  cursor: pointer; /* Hand cursor on hover */
-  transition: background-color 0.3s ease; /* Transition for a smooth color change on hover */
+  cursor: pointer; 
+  transition: background-color 0.3s ease; 
 }
 
 button:hover {
-  background-color: #006400; /* A darker green on hover */
+  background-color: #006400; 
 }
 
-/* Optional: If you want to give a title to your form */
+
 form h1 {
   text-align: center;
-  margin-bottom: 20px; /* Space between the title and the first field */
+  margin-bottom: 20px; 
 }
 
 .bar-show-container {
@@ -180,9 +183,15 @@ form h1 {
 }
 
 .bar-show-container .drink-description {
-  max-width: 80%; /* Control the width to prevent it from taking up the entire page */
-  margin: 20px auto; /* Center the description */
-  text-align: left; /* For a more natural reading flow */
-  text-indent: 2em; /* Indent the first line of the description */
-  line-height: 1.5; /* Spacing between lines for readability */
+  max-width: 80%; 
+  margin: 20px auto; 
+  text-align: center; 
+  text-indent: 2em; 
+  line-height: 1.5; 
+}
+
+.poison h1 {
+  color: darkgreen;
+  margin-top: 25px;
+  text-align: center;
 }

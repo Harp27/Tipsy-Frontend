@@ -1,21 +1,21 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import { getBarById, updateBar, deleteBar } from '../Api'; // Assuming you have a function like this in your Api.js
+import { getBarById, updateBar, deleteBar } from '../Api'; 
 
 function BarShowPage() {
-  const { id } = useParams(); // Get the bar ID from the route parameters
+  const { id } = useParams(); 
   const navigate = useNavigate();
   const [bar, setBar] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const [isEditing, setIsEditing] = useState(false); // New state for toggling the edit mode
-  const [formData, setFormData] = useState({}); // Form state for editing
+  const [isEditing, setIsEditing] = useState(false); 
+  const [formData, setFormData] = useState({}); 
 
   useEffect(() => {
     getBarById(id)
       .then(response => {
         setBar(response.data);
-        setFormData(response.data); // Set the initial form data to the fetched bar details
+        setFormData(response.data); 
         setLoading(false);
       })
       .catch(err => {
@@ -37,7 +37,7 @@ function BarShowPage() {
     try {
       await updateBar(formData);
       setBar(formData);
-      setIsEditing(false); // Close the edit form after updating
+      setIsEditing(false);
     } catch (error) {
       console.error("Error updating bar:", error);
     }
@@ -46,7 +46,7 @@ function BarShowPage() {
   const handleDelete = async () => {
     try {
       await deleteBar(id);
-      navigate('/bars'); // Navigate to the bars listing page after deletion
+      navigate('/bars'); 
     } catch (error) {
       console.error("Error deleting bar:", error);
     }
