@@ -1,38 +1,92 @@
-.App {
-  text-align: center;
+
+/* Override bg-dark in case Bootstrap updates don't catch the custom-header change */
+.bg-dark {
+  background-color: rgba(40, 44, 52, 0.70) !important;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.nav-container {
+  padding-right: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.custom-btn {
+  font-size: 1.2rem;  /* Adjust font size */
+  padding: 10px 20px;  /* Increase padding: top-bottom, left-right */
+  margin: 0 5px;  /* Optional: Add some margin between buttons */
+  color: forestgreen;
+  font-weight: bold
+}
+
+.saying {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin: 0 2rem; 
+  display: inline-block; /* Making sure transform works */
+  opacity: 0;
+  animation: slideIn 1s 1s forwards; /* Adding a delay so you can notice the effect */
+  color: darkorange
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.saying {
+  font-family: 'Pacifico', cursive;
+  /* ... other styles ... */
+}
+
+.home-container {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding: 2rem;
+}
+
+.home-text {
+  flex: 1;
+  margin-right: 2rem;
+}
+
+.home-text h1 {
+  font-weight: bold;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.home-text p {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #333;  /* Adjust to your preferred color */
+  margin-bottom: 2rem; /* Space between the paragraph and the button */
+}
+
+.view-bars-btn {
+  padding: 0.5rem 1rem;
+  background-color: #333;
   color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+
+  /* Optional styling for hover effect */
+  &:hover {
+      background-color: #555;
+  }
 }
 
-.App-link {
-  color: #61dafb;
+.home-image {
+  flex: 1;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.home-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px; /* Optional, to give rounded corners */
 }
